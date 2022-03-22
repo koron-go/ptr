@@ -15,7 +15,7 @@ func checkTV[T any](t *testing.T, p *T, want string) {
 	}
 }
 
-type Item0 struct {}
+type Item0 struct{}
 
 func TestP(t *testing.T) {
 	checkTV(t, ptr.P(1), "*int 1")
