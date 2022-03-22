@@ -5,7 +5,7 @@ func P[T any](v T) *T {
 	return &v
 }
 
-// V obtains a value which refered by a pointer.
+// V obtains a value which referred by a pointer.
 func V[T any](p *T) T {
 	if p == nil {
 		var zero T
