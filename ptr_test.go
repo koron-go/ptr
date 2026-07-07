@@ -23,6 +23,9 @@ func TestP(t *testing.T) {
 	checkTV(t, ptr.P(float64(1)), "*float64 1")
 	checkTV(t, ptr.P("abc"), "*string \"abc\"")
 	checkTV(t, ptr.P(Item0{}), "*ptr_test.Item0 ptr_test.Item0{}")
+
+	checkTV(t, ptr.P(true), "*bool true")
+	checkTV(t, ptr.P(false), "*bool false")
 }
 
 func checkT[T any](t *testing.T, p *T, want string) {
